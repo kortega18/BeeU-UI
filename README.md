@@ -21,3 +21,7 @@ style.css should now be in the css folder.
 ### Notes:
 Do not upload node_modules nor package-lock.json right now, as they are too large.
 CTRL + C then Y to terminate.
+
+### New Package Installation
+After changes made in package.json, rerun node.
+`npm run install`
