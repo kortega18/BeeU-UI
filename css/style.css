@@ -1,0 +1,158 @@
+body {
+  color: antiquewhite;
+  background-color: #000000;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 4em;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+h2 {
+  text-align: center;
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2em;
+  margin: 0;
+}
+
+a {
+  margin-top: 25px;
+}
+
+img {
+  margin: 25px;
+  height: 150px;
+  opacity: 70%;
+  filter: sepia(100%);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+div {
+  text-align: center;
+}
+
+#sign-up {
+  margin-top: 10%;
+}
+
+.input-text {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 10px;
+  width: 50%;
+  margin: auto;
+}
+
+.input {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid #9b9b9b;
+  outline: 0;
+  font-size: 1.3rem;
+  color: #fff;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+.input::placeholder {
+  color: transparent;
+}
+.input:placeholder-shown ~ .input-label {
+  font-size: 1.3rem;
+  cursor: text;
+  top: 20px;
+}
+
+.input-label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: #9b9b9b;
+}
+
+.input:focus {
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, #728257, #e7fbab);
+  border-image-slice: 1;
+}
+.input:focus ~ .input-label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: #728257;
+  font-weight: 700;
+}
+
+/* reset input */
+.input:required, .input:invalid {
+  box-shadow: none;
+}
+
+/* Fonts */
+.pacifico-regular {
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.btn-flip {
+  opacity: 1;
+  outline: 0;
+  color: #000000;
+  line-height: 40px;
+  position: relative;
+  letter-spacing: 1px;
+  display: inline-block;
+  text-decoration: none;
+}
+.btn-flip:hover:after {
+  opacity: 1;
+  transform: translateY(0) rotateX(0);
+}
+.btn-flip:hover:before {
+  opacity: 0;
+  transform: translateY(50%) rotateX(90deg);
+}
+.btn-flip:after {
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  color: #728257;
+  display: block;
+  transition: 0.5s;
+  position: absolute;
+  background: #e7fbab;
+  content: attr(data-back);
+  transform: translateY(-50%) rotateX(90deg);
+}
+.btn-flip:before {
+  top: 0;
+  left: 0;
+  opacity: 1;
+  color: #000000;
+  display: block;
+  padding: 0 30px;
+  line-height: 40px;
+  transition: 0.5s;
+  position: relative;
+  background: #9b9b9b;
+  content: attr(data-front);
+  transform: translateY(0) rotateX(0);
+}
+
+/*# sourceMappingURL=style.css.map */

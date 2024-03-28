@@ -13,21 +13,29 @@
         <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 
         <!-- Styles -->
-        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
+        <img src="images/BeeU-AppIcon.jpg">
         <h2>JUST</h2>
         <h1>BE YOU</h1>
 
-        <div id="login-input">
-            <input id="login-email" type="email">
-            <input id="login-password" type="password">
-            <button id="login-button">login</button>
+        <div class="input-text">
+          <input type="email" class="input" placeholder="email" name="email" id='email' required />
+          <label for="email" class="input-label">email</label>
         </div>
 
-        <div id="sign-up-and-login">
-            <p>Can't be just you yet?</p>
-            <button id="signup-login">sign up now</button>
+        <div class="input-text">
+          <input type="password" class="input" placeholder="password" name="password" id='password' required />
+          <label for="password" class="input-label">password</label>
+        </div>
+
+        <div>
+            <a href="#" class="btn-flip" data-back="enjoy" data-front="login"></a>
+        </div>
+
+        <div id="sign-up">
+            <a href="#" class="btn-flip" data-back="then sign up" data-front="can't be 'just you' yet?"></a>
         </div>
         <!-- <script src="index.js"></script> -->
     </body>

@@ -1,0 +1,175 @@
+$primary: #728257;
+$secondary: #e7fbab;
+$white: #fff;
+$gray: #9b9b9b;
+$black: #000000;
+
+body {
+    color: antiquewhite;
+    background-color: $black;
+}
+
+h1 {
+    text-align: center;
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 4em;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+h2 {
+    text-align: center;
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2em;
+    margin: 0;
+}
+
+a {
+    margin-top: 25px;
+}
+
+img {
+    margin: 25px;
+    height: 150px;
+    opacity: 70%;
+    filter: sepia(100%);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+div {
+    text-align: center;
+}
+
+#sign-up {
+    margin-top: 10%;
+}
+
+.input-text {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 10px;
+  width: 50%;
+  margin: auto;
+}
+
+.input {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid $gray;
+  outline: 0;
+  font-size: 1.3rem;
+  color: $white;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+
+  &::placeholder {
+    color: transparent;
+  }
+
+  &:placeholder-shown ~ .input-label {
+    font-size: 1.3rem;
+    cursor: text;
+    top: 20px;
+  }
+}
+
+.input-label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: $gray;
+}
+
+.input:focus {
+  ~ .input-label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: $primary;
+    font-weight:700;    
+  }
+  padding-bottom: 6px;  
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, $primary,$secondary);
+  border-image-slice: 1;
+
+}
+
+/* reset input */
+.input{
+  &:required,&:invalid { box-shadow:none; }
+}
+
+
+/* Fonts */
+.pacifico-regular {
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+// Button
+$speed: 0.5s;
+
+.btn-flip{
+    opacity: 1;
+    outline: 0;
+    color: $black;
+    line-height: 40px;
+    position: relative;
+    letter-spacing: 1px;
+    display: inline-block;
+    text-decoration: none;
+
+    &:hover{
+        &:after{
+            opacity: 1;
+            transform: translateY(0) rotateX(0);
+        }
+        
+        &:before{
+            opacity: 0;
+            transform: translateY(50%) rotateX(90deg);
+        }
+    }
+
+    &:after{
+        top: 0;
+        left: 0;
+        opacity: 0;
+        width: 100%;
+        color: $primary;
+        display: block;
+        transition: $speed;
+        position: absolute;
+        background: $secondary;
+        content: attr(data-back);
+        transform: translateY(-50%) rotateX(90deg);
+    }
+
+    &:before{
+        top: 0;
+        left: 0;
+        opacity: 1;
+        color: $black;
+        display: block;
+        padding: 0 30px;
+        line-height: 40px;
+        transition: $speed;
+        position: relative;
+        background: $gray;
+        content: attr(data-front);
+        transform: translateY(0) rotateX(0);
+    }
+}
